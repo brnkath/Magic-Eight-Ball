@@ -1,0 +1,29 @@
+body {
+  background-image: linear-gradient(to bottom right, #e4dccf, #f9f5eb);
+  height: vh;
+  width: vw;
+}
+
+.hr-short {
+  width: 50%;
+  margin: auto;
+}
+
+.game-container {
+  border: 2px solid black;
+  width: 98vw;
+  height: 100vh;
+  max-width: 380px;
+  max-height: 550px;
+}
+
+.response {
+  color: red;
+  font-size: 1.2rem;
+}
+
+.ad-bottom {
+  background-color: #f5eddc;
+  width: 300px;
+  height: 50px;
+}

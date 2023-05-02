@@ -17,28 +17,40 @@
     />
   </head>
   <body>
-    <div>
-      <h1>Magic Eight Ball</h1>
-      <form>
-        <div class="m-3 w-25">
-          <label for="inputName" class="form-label">Your name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputName"
-            aria-describedby="yourName"
-          />
+    <div
+      class="d-flex vh-100 vw-100 align-items-center text-center justify-content-center"
+    >
+      <div
+        class="game-container position-relative align-items-center text-center rounded-2"
+      >
+        <h1 class="mt-4">Magic Eight Ball</h1>
+        <hr />
+        <form class="m-3">
+          <div class="m-3">
+            <input
+              type="text"
+              class="form-control"
+              id="inputName"
+              placeholder="Your name"
+              aria-describedby="yourName"
+            />
+          </div>
+          <div class="m-3">
+            <input
+              type="text"
+              class="form-control"
+              id="inputQuestion"
+              placeholder="Your question"
+            />
+          </div>
+          <button type="button" class="btn btn-primary m-2">Submit</button>
+        </form>
+        <hr />
+        <div class="answer">
+          <h2>Answer</h2>
+          <hr class="hr-short" />
+          <div class="response mt-4">Your answer will show here</div>
         </div>
-        <div class="m-3 w-25">
-          <label for="inputQuestion" class="form-label">Your question</label>
-          <input type="text" class="form-control" id="inputQuestion" />
-        </div>
-        <button type="submit" class="btn btn-primary m-3">Submit</button>
-      </form>
-
-      <div class="answer">
-        <h2>Answer</h2>
-        <div id="response">Your answer will show here</div>
       </div>
     </div>
 
