@@ -35,9 +35,39 @@ document.querySelector(".btn").addEventListener("click", function () {
       break;
   }
 
-  document.querySelector(
-    ".response"
-  ).innerHTML = `Hello, ${userName}! <br> You asked: ${userQuestion}? <br> The Magic Eight Ball says: <br> ${eightBall}`;
+  let buttonSound = new Audio("snd/sound1.mp3");
+  buttonSound.play();
+
+  setTimeout(function () {
+    if (
+      (userName == null || userName == "") &&
+      userQuestion !== null &&
+      userQuestion !== ""
+    ) {
+      document.querySelector(
+        ".response"
+      ).innerHTML = `Hello! <br> You asked: ${userQuestion}? <br> The Magic Eight Ball says: <br> ${eightBall}`;
+    } else if (
+      userName !== null &&
+      userName !== "" &&
+      (userQuestion == null || userQuestion == "")
+    ) {
+      document.querySelector(
+        ".response"
+      ).innerHTML = `Hello, ${userName}! <br> You didn't even ask a question. WTF?`;
+    } else if (
+      (userName == null || userName == "") &&
+      (userQuestion == null || userQuestion == "")
+    ) {
+      document.querySelector(
+        ".response"
+      ).innerHTML = `Hello! <br> You didn't even ask a question. WTF?`;
+    } else {
+      document.querySelector(
+        ".response"
+      ).innerHTML = `Hello, ${userName}! <br> You asked: ${userQuestion}? <br> The Magic Eight Ball says: <br> ${eightBall}`;
+    }
+  }, 2000);
 });
 
 // userName ? console.log(`Hello, ${userName}!`) : console.log("Hello!");
