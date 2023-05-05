@@ -46,7 +46,7 @@ document.querySelector(".btn").addEventListener("click", function () {
     ) {
       document.querySelector(
         ".response"
-      ).innerHTML = `Hello! <br> You asked: ${userQuestion}? <br> The Magic Eight Ball says: <br> ${eightBall}`;
+      ).innerHTML = `Hello! <br> You asked: ${userQuestion}? <br> <span style="font-size: 1.2rem; font-weight: bold; color: #0D6EFD;">The Magic Eight Ball says: <br> ${eightBall}</span>`;
     } else if (
       userName !== null &&
       userName !== "" &&
@@ -54,18 +54,18 @@ document.querySelector(".btn").addEventListener("click", function () {
     ) {
       document.querySelector(
         ".response"
-      ).innerHTML = `Hello, ${userName}! <br> You didn't even ask a question. WTF?`;
+      ).innerHTML = `Hello, ${userName}! <br> <span style="font-size: 1.2rem; font-weight: bold; color: #0D6EFD;">You didn't even ask a question. WTF?</span>`;
     } else if (
       (userName == null || userName == "") &&
       (userQuestion == null || userQuestion == "")
     ) {
       document.querySelector(
         ".response"
-      ).innerHTML = `Hello! <br> You didn't even ask a question. WTF?`;
+      ).innerHTML = `Hello! <br> <span style="font-size: 1.2rem; font-weight: bold; color: #0D6EFD;">You didn't even ask a question. WTF?</span>`;
     } else {
       document.querySelector(
         ".response"
-      ).innerHTML = `Hello, ${userName}! <br> You asked: ${userQuestion}? <br> The Magic Eight Ball says: <br> ${eightBall}`;
+      ).innerHTML = `Hello, ${userName}! <br> You asked: ${userQuestion}? <br> <span style="font-size: 1.2rem; font-weight: bold; color: #0D6EFD;">The Magic Eight Ball says: <br> ${eightBall}</span>`;
     }
   }, 2000);
 });

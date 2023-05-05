@@ -20,6 +20,8 @@ body {
 .response {
   color: red;
   font-size: 1.2rem;
+  height: 170px;
+  overflow: auto;
 }
 
 .ad-bottom {
