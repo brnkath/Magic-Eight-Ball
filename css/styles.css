@@ -15,6 +15,7 @@ body {
   height: 100vh;
   max-width: 380px;
   max-height: 550px;
+  overflow: auto;
 }
 
 .response {
